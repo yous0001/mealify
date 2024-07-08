@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@100..900&display=swap');
+/*
+font-family: "Amatic SC", sans-serif;
+font-family: "Inter", sans-serif;
+*/
 :root{
-    --red-color:#CE1212
+    --red-color:#CE1212;
+    --gray-section:#eee;
 }
+/*navbar*/
 nav{
     background-color: white;
 }
@@ -8,6 +15,7 @@ nav .container{
     display:flex;
     justify-content: space-between;
     padding-block: 20px;
+    align-items: center;
 }
 nav .logo a::after{
     content: ".";
@@ -56,4 +64,74 @@ nav .darkmode i{
     font-size: 25px;
     color: #212529;
     font-weight: 900;
+}
+
+/*header*/
+
+header{
+    background-color: var(--gray-section);
+    height: 90vh;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+}
+header .container .header-dish{
+    width: 40%;
+    align-self: center;
+}
+header .container .header-dish img{
+    width: 100%;
+    
+}
+header .container .header-dish img:hover{
+    animation: move alternate infinite 0.2s;
+    
+}
+header .container .header-content{
+    width: 40%;
+}
+header .container .header-content h1{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+}
+header .container .header-content p{
+    color: #4f4f5a;
+}
+.header-btns{
+display: flex;
+gap: 20px;
+}
+.header-btns .book-btn{
+    border: 0;
+    background-color: var(--red-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 0px 24px 24px 24px;
+    
+}
+.header-btns .watch-btn i{
+    padding: 15px;
+    background-color:white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.header-btns .watch-btn{
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes move {
+    0% {transform:translate(2px,0)}
+    25% {transform:translate(2px,2px)}
+    50% {transform:translate(-2px,2px)}
+    100% {transform:translate(-2px,-2px)}
+    
 }
