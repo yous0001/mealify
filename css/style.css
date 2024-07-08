@@ -1,0 +1,59 @@
+:root{
+    --red-color:#CE1212
+}
+nav{
+    background-color: white;
+}
+nav .container{
+    display:flex;
+    justify-content: space-between;
+    padding-block: 20px;
+}
+nav .logo a::after{
+    content: ".";
+    color: var(--red-color);
+
+}
+nav .links ul{
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+nav .links ul li a{
+    text-decoration: none;
+    color: #7F7F90;
+    font-weight: 600;
+    font-size: 17px;
+    position: relative;
+    transition: all 0.5s;
+}
+nav .links ul li a:hover{
+    color: #212529;
+
+}
+nav .links ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width:0;
+    height: 2px;
+    left: 0;
+    background-color: var(--red-color);
+    transition: all 0.5s;
+}
+nav .links ul li a:hover::after{
+    width:100%;
+}
+
+
+nav .logo a{
+    color: #212529;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+}
+nav .darkmode i{
+    font-size: 25px;
+    color: #212529;
+    font-weight: 900;
+}
